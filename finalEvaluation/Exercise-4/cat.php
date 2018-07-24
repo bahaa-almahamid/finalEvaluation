@@ -19,6 +19,7 @@
      private static $allowedSex = ['male', 'female'];  // Here we set the allowed genders as a private variable 
 
      // I will create a function to get the infos from the new instance object of the class cat //
+     // The getInfo method have to return an array. It's an error to display it inside the method
      public function getInfo() {
         var_dump(get_object_vars($this));
      }
@@ -82,6 +83,7 @@
 
 
     // We make a static function to access an instance object propereties.
+    // Better to use constructor here
     public static function fromArray(array $definition)
     {
         $cat = new Cat();
